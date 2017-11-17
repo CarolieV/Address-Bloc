@@ -57,6 +57,14 @@ require_relative '../models/address_book'
        expect(new_entry.email).to eq('augusta.king@lovelace.com')
      end
    end
+ describe "#nuked_by_North_Korea" do
+     it "should delete all entries" do
+book.add_entry('Ada Lovelace', '010.012.1815', 'augusta.king@lovelace.com')
+book.add_entry('Ada Lovelace', '010.012.1815', 'augusta.king@lovelace.com')
+book.add_entry('Ada Lovelace', '010.012.1815', 'augusta.king@lovelace.com')
+
+         book.nuked_by_North_Korea
+         expect(book.entries.size) to eq(0)
 
    describe "#binary_search" do
      it "searches AddressBook for a non-existent entry" do
