@@ -15,7 +15,6 @@
      puts "4 - Import entries from a CSV"
      puts "5 - View Entry Number n"
      puts "6 - Exit"
-
      print "Enter your selection: "
  
      selection = gets.to_i
